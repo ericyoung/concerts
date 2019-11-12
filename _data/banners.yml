@@ -1,0 +1,35 @@
+- event: memorial day
+  image: holiday-usflag.png
+  status: hide
+  message: Bill Young will be closed Monday, May 27th for Memorial Day.
+  lesser: Please submit orders by 2pm Thursday, May 23 to ensure delivery prior to the holiday weekend!
+
+- event: independence day
+  image: holiday-usflag.png
+  status: hide
+  message: BYP'S OFFICES WILL BE CLOSED ON THURSDAY, JULY 4TH TO CELEBRATE INDEPENDENCE DAY
+
+- event: labor day
+  image: holiday-usflag.png
+  status: hide
+  message: BYP'S OFFICES WILL BE CLOSED ON MONDAY, SEPTEMBER 3RD IN OBSERVANCE OF LABOR DAY
+
+- event: thanksgiving
+  image: holiday-thanksgiving.png
+  status: hide
+  message: BYP'S OFFICES WILL BE CLOSED ON THURSDAY &amp; FRIDAY, NOVEMBER 23RD &amp; 24TH TO CELEBRATE THANKSGIVING
+
+- event: christmas
+  image: holiday-christmas.png
+  status: hide
+  message: HAPPY HOLIDAYS! BYP'S OFFICES WILL BE CLOSED ON DECEMBER 24, 25, 31 & JANUARY 1st TO CELEBRATE THE HOLIDAYS
+
+- event: new years
+  image: holiday-newyear.png
+  status: hide
+  message: BYP'S OFFICES WILL BE CLOSED ON THURSDAY, JANUARY 1ST TO CELEBRATE THE NEW YEAR
+
+- event: emergency
+  image:
+  status: hide
+  message: Due to the severe flooding caused by Hurricane Harvey, our Sugar Land offices may be operating at reduced capacity. Please contact our LA office directly at (281) 340-7452 during this time. Please check back here for operational updates as they become available.

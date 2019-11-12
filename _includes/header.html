@@ -1,0 +1,90 @@
+<div id="preloaded-images">
+  <!--<img src="./#" width="1" height="1" alt="" />-->
+</div>
+<a class="anchor" id="top"></a>
+
+<!---------------------------------------------------------------------------------------------------->
+<!-- OPTIONAL TOP BANNER  ---------------------------------------------------------------------------->
+{% for banner in site.data.banners %}
+  {% if banner.status == 'show' %}
+    <div id="topbanner">
+      <div id="topbanner-icon"><img src="assets/images/{{banner.image}}" alt="" /></div>
+      <div id="topbanner-text">
+        {{ banner.message }}
+        {% if banner.lesser %}
+        <br/><span style="font-size:14px;">{{ banner.lesser }}</span>
+        {% endif %}
+      </div>
+      <div id="topbanner-close"></div>
+    </div>
+  {% endif %}
+{% endfor %}
+
+<!-- HEADER -->
+<div id="header">
+    <div id="navbar-bg">
+        <div id="navbar">
+            <div id="logo-tiny"><a class="scroller" href="#top"><img src="{{ '/assets/images/logo-byp-tiny.png' | relative_url }}" alt="" /></a></div>
+            <div id="nav">
+                <div id="menubutton"></div>
+                <ul class="nav">
+                    <!--<li><a class="scroller" href="#reel">REEL</a></li>-->
+                    <li><a class="scroller" href="#work">WORK</a>
+                        <ul class="subnav">
+                        	<li><a href="./video.asp">VIDEO</a></li>
+                            <li><a href="./audio.asp">AUDIO</a></li>
+                            <li><a href="./voicetalent.asp">VOICE TALENT</a></li>
+                            <li><a href="./art.asp">ART</a></li>
+                            <li><a href="./interactive.asp">INTERACTIVE</a></li>
+                            <li><a href="./event.asp">LIVE EVENT</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./tours.asp">TOURS</a></li>
+                    <li><a href="https://app.byp.com/">LOGIN</a></li>
+                    <li><a href="./contact.asp">CONTACT</a></li>
+                    <br class="clear" />
+                </ul>
+                <ul class="social-top">
+                    <li><a href="https://www.facebook.com/byp" target="_blank"><img src="{{ '/assets/images/icon-facebook.png' | relative_url }}" alt="" /></a></li>
+                    <li><a href="https://twitter.com/bypconcerts" target="_blank"><img src="{{ '/assets/images/icon-twitter.png' | relative_url }}" alt="" /></a></li>
+                    <li><a href="https://www.instagram.com/bypconcerts/" target="_blank"><img src="{{ '/assets/images/icon-instagram.png' | relative_url }}" alt="" /></a></li>
+                    <!--<li><a href="https://www.pinterest.com/billyoungprod" target="_blank"><img src="./img/icon-pinterest.png" alt="" /></a></li>-->
+                    <br class="clear" />
+                </ul>
+                <br class="clear" />
+            </div>
+         </div>
+    </div>
+
+    <div id="logo-container">
+        <div id="logoflag2"><img class="noscale" src="{{ '/assets/images/logo-byp-flag2-v2.png' | relative_url }}" alt="" /></div>
+        <div id="logoflag1"><img class="noscale" src="{{ '/assets/images/logo-byp-flag-v2.png' | relative_url }}" alt="" /></div>
+    </div>
+
+    <a id="byp_link_container" href="http://www.byp.biz/">
+        <div id="corporate_logo"></div>
+        <div id="corporate_text">See our corporate and<br />tradeshow work!</div>
+        <div id="corporate_arrow"></div>
+    </a>
+</div>
+
+<!-- MOBILE MENU -->
+<div id="mobilemenu-container">
+    <div id="mobilemenu">
+        <ul class="mobilenav">
+            <li><a class="scroller mobilenav" href="#top">HOME</a></li>
+            <!--<li><a class="scroller mobilenav" href="#reel">REEL</a></li>-->
+            <li><a class="scroller mobilenav" href="#work">WORK</a></li>
+            <li><a class="mobilenav" href="./tours.asp">TOURS</a></li>
+            <li><a class="mobilenav" href="https://app.byp.com/">LOGIN</a></li>
+            <li><a class="mobilenav" href="./contact.asp">CONTACT</a></li>
+        </ul>
+    </div>
+    <div class="closebutton"></div>
+</div>
+
+<!-- HOME VIDEO -->
+<div id="home-section">
+    <video id="home-video" autoplay loop muted><source src="{{ '/assets/images/video/concert_bg.mp4' | relative_url }}" type="video/mp4" /></video>
+    <div id="home-video-shade"></div>
+</div>

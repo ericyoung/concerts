@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<h4>blog</h4>
+{% for post in site.posts %}
+		<time>{{ post.date | date: "%b %-d, %Y" }}</time>
+		<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+{% endfor %}
+
+<p>subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+<ul>
+{% for member in site.data.members %}
+  <li>
+    <a href="https://github.com/{{ member.github }}">
+      {{ member.name }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
+
+<ul>
+{% for org_hash in site.data.orgs %}
+{% assign org = org_hash[1] %}
+  <li>
+    <a href="https://github.com/{{ org.username }}">
+      {{ org.name }}
+    </a>
+    ({{ org.members | size }} members)
+  </li>
+{% endfor %}
+</ul>

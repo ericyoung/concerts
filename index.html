@@ -1,0 +1,210 @@
+---
+layout: default
+---
+<!-- ARTISTS -->
+<div id="artist-section">
+
+  <div id="artist-search">
+    <div id="artist-search-left">
+      <div id="artist-search-left-sub">
+        <div id="arrow-find"><img class="noscale" src="{{ 'assets/images/arrow-find.png' | relative_url }}" alt="" /></div>
+          <div id="text-find">FIND A<br />TOUR</div>
+        </div>
+      </div>
+      <div id="artist-search-right">
+        <select id="Artist-Home">
+          {% for artist in site.data.artists %}
+          <option value="./{{artist.page}}">{{artist.name}}</option>
+          {% endfor %}
+        </select>
+
+        <!-- SELECT2 -->
+        <script type="text/javascript">
+					$('select#Artist-Home').select2({
+						placeholder: 'TOUR NAME',
+						escapeMarkup: function (markup) {
+							return markup;
+						}
+					});
+					$('select#Artist-Home').on("select2:select", function (e) {
+						window.location.href = e.params.data.id;
+					});
+				</script>
+
+					<!-- CHOSEN -->
+          <!--
+					<script type="text/javascript">
+						$('select#Artist').chosen({no_results_text:"Contact BYP for "}).change(function(e){
+							window.location = $(this).val();
+						});
+          </script>
+          -->
+        </div>
+      </div>
+
+      <!-- FEATURE SLIDER -->
+      <div class="master-slider ms-skin-default" id="slider-artists">
+
+        <!-- VIDEO FEATURE EXAMPLE -->
+        <!--
+        <div class="ms-slide" data-delay="0.1">
+            <img src="./js/masterslider/style/blank.gif" data-src="./features-video/reel-poster.jpg" alt="" />
+            <div class="ms-info"><a id="feature-video" href="https://vimeo.com/147479448"></a></div>
+        </div>
+        -->
+
+        <!-- COMEDY BANNER -->
+        <div class="ms-slide" data-delay="0.1">
+          <img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/images/byp-comedy-banner.jpg' | relative_url }}" alt="" />
+          <div class="ms-info"><a href="./comedy.asp"></a></div>
+        </div>
+
+				<!-- FEATURES FROM FOLDER -->
+        <div class="ms-slide" data-delay="0.1">
+          <img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/features/5248 BYP-1.jpg' | relative_url }}" alt="" />
+          <div class="ms-info"><a href="./tour-detail.asp?id=5248 BYP-1"></a></div>
+        </div>
+
+        <div class="ms-slide" data-delay="0.1">
+        	<img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/features/5249.jpg' | relative_url }}" alt="" />
+          <div class="ms-info"><a href="./tour-detail.asp?id=5249"></a></div>
+        </div>
+
+
+        <!-- FESTIVALS BANNER -->
+        <div class="ms-slide" data-delay="0.1">
+          <img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/images/byp-festivals-banner.jpg' | relative_url }}" alt="" />
+          <div class="ms-info"><a href="./festivals.asp"></a></div>
+        </div>
+
+        <div class="ms-slide" data-delay="0.1">
+        	<img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/features/5262.jpg' | relative_url }}" alt="" />
+          <div class="ms-info"><a href="./tour-detail.asp?id=5262"></a></div>
+        </div>
+
+        <div class="ms-slide" data-delay="0.1">
+        	<img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/features/5384 BYP-2.jpg' | relative_url }}" alt="" />
+          <div class="ms-info"><a href="./tour-detail.asp?id=5384 BYP-2"></a></div>
+        </div>
+
+
+        <!-- ALBUM BANNER -->
+        <div class="ms-slide" data-delay="0.1">
+          <img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/images/byp-album-banner.jpg' | relative_url }}" alt="" />
+          <div class="ms-info"><a href="./album.asp"></a></div>
+        </div>
+
+        <div class="ms-slide" data-delay="0.1">
+        	<img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/features/5385.jpg' | relative_url }}" alt="" />
+          <div class="ms-info"><a href="./tour-detail.asp?id=5385"></a></div>
+        </div>
+
+
+        <div class="ms-slide" data-delay="0.1">
+        	<img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/features/5389.jpg' | relative_url }}" alt="" />
+          <div class="ms-info"><a href="./tour-detail.asp?id=5389"></a></div>
+        </div>
+
+        <!-- WEB TRAILERS BANNER -->
+        <div class="ms-slide" data-delay="0.1">
+          <img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/images/byp-webtrailers-banner.jpg' | relative_url }}" alt="" />
+          <div class="ms-info"><a href="./webtrailers.asp"></a></div>
+        </div>
+
+        <div class="ms-slide" data-delay="0.1">
+        	<img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/features/5429 BYP-3.jpg' | relative_url }}" alt="" />
+          <div class="ms-info"><a href="./tour-detail.asp?id=5429 BYP-3"></a></div>
+        </div>
+
+        <div class="ms-slide" data-delay="0.1">
+        	<img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/features/5430.jpg' | relative_url }}" alt="" />
+          <div class="ms-info"><a href="./tour-detail.asp?id=5430"></a></div>
+        </div>
+
+        <div class="ms-slide" data-delay="0.1">
+        	<img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/features/5438.jpg' | relative_url }}" alt="" />
+          <div class="ms-info"><a href="./tour-detail.asp?id=5438"></a></div>
+        </div>
+
+        <div class="ms-slide" data-delay="0.1">
+        	<img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/features/5439 BYP-4.jpg' | relative_url }}" alt="" />
+          <div class="ms-info"><a href="./tour-detail.asp?id=5439 BYP-4"></a></div>
+        </div>
+
+        <div class="ms-slide" data-delay="0.1">
+        	<img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/features/5461.jpg' | relative_url }}" alt="" />
+          <div class="ms-info"><a href="./tour-detail.asp?id=5461"></a></div>
+        </div>
+
+        <div class="ms-slide" data-delay="0.1">
+        	<img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/features/5493.jpg' | relative_url }}" alt="" />
+          <div class="ms-info"><a href="./tour-detail.asp?id=5493"></a></div>
+        </div>
+
+        <div class="ms-slide" data-delay="0.1">
+        	<img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/features/5494 BYP-5.jpg' | relative_url }}" alt="" />
+          <div class="ms-info"><a href="./tour-detail.asp?id=5494 BYP-5"></a></div>
+        </div>
+
+        <div class="ms-slide" data-delay="0.1">
+        	<img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/features/xxxxx fm.jpg' | relative_url }}" alt="" />
+        </div>
+
+        <div class="ms-slide" data-delay="0.1">
+        	<img src="{{ 'assets/js/masterslider/style/blank.gif' | relative_url }}" data-src="{{ 'assets/features/xxxxx sl.jpg' | relative_url }}" alt="" />
+        </div>
+
+        <!--
+        <div id="slider-left-overlay"></div>
+          <div id="slider-right-overlay"></div>
+        -->
+      </div>
+
+    <div id="tagline">SERVING THE LIVE ENTERTAINMENT INDUSTRY FOR OVER <span class="numyears">35</span> YEARS</div>
+
+  </div>
+
+  <!-- REEL / WORK -->
+  <div id="reelwork-section">
+  	<!-- REEL -->
+    <a class="anchor" id="reel"></a>
+    <div id="reel-container">
+    	<img id="reel-poster" src="{{ 'assets/images/reel.jpg' | relative_url }}" alt="" />
+      <a id="playbtn" href="https://vimeo.com/272371088"></a>
+      <!--<div class="section-header"><div class="sh-rect"><span>REEL</span></div><div class="sh-tri"></div></div>-->
+    </div>
+
+    <!-- WORK -->
+    <a class="anchor" id="work"></a>
+    <div id="work-container">
+    	<div id="work-panels">
+        <a class="work-panel" href="./video">
+          <div class="img_zoom_container"><img src="{{ 'assets/images/work-video.jpg' | relative_url }}" alt="" /><img class="sepia-img" style="position:absolute; top:0px; left:0px;" src="{{ 'assets/images/work-video-sepia.jpg' | relative_url }}" alt="" /></div>
+          <div class="work_title">VIDEO</div>
+        </a>
+        <a class="work-panel" href="./audio">
+          <div class="img_zoom_container"><img src="{{ 'assets/images/work-audio.jpg' | relative_url }}" alt="" /><img class="sepia-img" style="position:absolute; top:0px; left:0px;" src="{{ 'assets/images/work-audio-sepia.jpg' | relative_url }}" alt="" /></div>
+          <div class="work_title">AUDIO</div>
+        </a>
+        <a class="work-panel" href="./voicetalent">
+          <div class="img_zoom_container"><img src="{{ 'assets/images/work-voice.jpg' | relative_url }}" alt="" /><img class="sepia-img" style="position:absolute; top:0px; left:0px;" src="{{ 'assets/images/work-voice-sepia.jpg' | relative_url }}" alt="" /></div>
+          <div class="work_title">VOICE TALENT</div>
+        </a>
+        <a class="work-panel" href="./art">
+          <div class="img_zoom_container"><img src="{{ 'assets/images/work-art.jpg' | relative_url }}" alt="" /><img class="sepia-img" style="position:absolute; top:0px; left:0px;" src="{{ 'assets/images/work-art-sepia.jpg' | relative_url }}" alt="" /></div>
+          <div class="work_title">ART</div>
+        </a>
+        <a class="work-panel" href="./interactive">
+          <div class="img_zoom_container"><img src="{{ 'assets/images/work-interactive.jpg' | relative_url }}" alt="" /><img class="sepia-img" style="position:absolute; top:0px; left:0px;" src="{{ 'assets/images/work-interactive-sepia.jpg' | relative_url }}" alt="" /></div>
+          <div class="work_title">INTERACTIVE</div>
+        </a>
+        <a class="work-panel" href="./event">
+          <div class="img_zoom_container"><img src="{{ 'assets/images/work-events.jpg' | relative_url }}" alt="" /><img class="sepia-img" style="position:absolute; top:0px; left:0px;" src="{{ 'assets/images/work-events-sepia.jpg' | relative_url }}" alt="" /></div>
+          <div class="work_title">LIVE EVENT</div>
+        </a>
+        <br class="clear" />
+      </div>
+      <div class="section-header"><div class="sh-rect"><span>WORK</span></div><div class="sh-tri"></div></div>
+    </div>
+    <br class="clear" />
+</div>
